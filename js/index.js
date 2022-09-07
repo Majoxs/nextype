@@ -37,31 +37,33 @@ tabs();
 
 const slider = document.querySelector('.swiper');
 
-const swiper = new Swiper(slider, {
-  slidesPerView: 'auto',
-  spaceBetween: 5,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-  },
-  breakpoints: {
-    690: {
-      slidesPerView: 2,
-      spaceBetween: 16,
+if (slider) {
+  const swiper = new Swiper(slider, {
+    slidesPerView: 'auto',
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 16,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
     },
-    1366: {
-      slidesPerView: 4,
-      spaceBetween: 16,
-    },
-  }
-});
+    breakpoints: {
+      690: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      1366: {
+        slidesPerView: 4,
+        spaceBetween: 16,
+      },
+    }
+  });
+}
